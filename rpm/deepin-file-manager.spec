@@ -1,7 +1,7 @@
 %global repo dde-file-manager
 
 Name:           deepin-file-manager
-Version:        5.2.0.37
+Version:        5.2.0.64
 Release:        1%{?dist}
 Summary:        Deepin File Manager
 License:        GPLv3
@@ -134,6 +134,10 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/dde-open.desktop
 %{_unitdir}/dde-filemanager-daemon.service
 %{_datadir}/polkit-1/actions/com.deepin.*.policy
 %{_datadir}/glib-2.0/schemas/*
+%ifarch aarch64
+%{_bindir}/file-manager.sh
+%{_sysconfdir}/xdg/autostart/%{repo}-autostart.desktop
+%endif
 
 %files devel
 %{_includedir}/%{repo}/
@@ -148,5 +152,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/dde-open.desktop
 %dir %{_datadir}/dde-desktop
 %{_datadir}/dde-desktop/translations/
 %{_datadir}/dbus-1/services/com.deepin.dde.desktop.service
+%ifarch aarch64
+%{_bindir}/dde-computer.sh
+%{_bindir}/dde-trash.sh
+%endif
 
 %changelog
