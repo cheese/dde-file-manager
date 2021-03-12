@@ -52,6 +52,7 @@ BuildRequires:  pkgconfig(xcb-util)
 BuildRequires:  pkgconfig(xcb-ewmh)
 BuildRequires:  pkgconfig(gio-qt)
 BuildRequires:  qt5-linguist
+BuildRequires:  make
 
 # run command by QProcess
 Requires:       deepin-shortcut-viewer
