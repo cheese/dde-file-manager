@@ -80,6 +80,7 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 Requires:       deepin-dock
 Requires:       deepin-launcher
 Requires:       deepin-session-ui
+Requires:       deepin-control-center
 
 %description -n deepin-desktop
 Deepin desktop environment - desktop module.
